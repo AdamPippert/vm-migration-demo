@@ -1,0 +1,12 @@
+---
+- name: build image stream and buildconfig
+  hosts: localhost
+  tasks:
+
+  - name: build an image stream and buildconfig
+    redhat.openshift.k8s:
+      state: present
+      source: {{item}}
+    loop:
+      - vddk.yml
+      - vddk-build.yml

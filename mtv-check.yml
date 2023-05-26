@@ -1,0 +1,9 @@
+---
+- name: check for Migration Toolkit for Virtualization
+  hosts: localhost
+  
+  tasks:
+  
+  - name: check to see if MTV is installed on cluster
+    debug:
+      msg: "MTV Installed"
